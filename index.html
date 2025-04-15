@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorteo de Números</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="start-only">
+
+  <!-- Panel izquierdo -->
+  <div class="left-panel">
+    <div class="container" id="mainContainer">
+      <h1>Sorteo de Números</h1>
+      <div class="form-group">
+        <label for="maxNumber">Cantidad de números para el sorteo:</label>
+        <input type="number" id="maxNumber" min="1" value="1" placeholder="Ingrese un número (1)" />
+      </div>
+      <div class="form-group">
+        <label for="displayCount">Números a mostrar antes del ganador:</label>
+        <select id="displayCount" class="select-input">
+          <option value="0">0 números</option>
+          <option value="1" selected>1 número</option>
+          <option value="2">2 números</option>
+          <option value="3">3 números</option>
+          <option value="4">4 números</option>
+          <option value="5">5 números</option>
+          <option value="6">6 números</option>
+          <option value="7">7 números</option>
+          <option value="8">8 números</option>
+          <option value="9">9 números</option>
+          <option value="10">10 números</option>
+        </select>
+      </div>
+      <button id="startRaffle">Iniciar Sorteo</button>
+      <div id="error" class="error">Por favor ingrese un número mayor o igual a 1.</div>
+      <div id="results" class="results">
+        <h2>Números Descartados:</h2>
+        <div id="numbersContainer" class="numbers-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel derecho -->
+  <div class="right-panel">
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div id="winnerDisplay" class="winner-display">
+      <h1>🎉 ¡El número ganador es!</h1>
+      <div class="winner-number-container">
+        <div class="winner-rays" id="winnerRays"></div>
+        <div id="winnerNumberFinal" class="winner-number"></div> <!-- El número ganador será actualizado dinámicamente aquí -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="winnerModal" class="modal">
+    <div class="modal-content">
+      <h2>🎉 ¡Atención!</h2>
+      <p>Todos los números han sido sorteados. ¿Estás listo para conocer el número ganador?</p>
+      <button id="closeModal">Revelar ganador</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

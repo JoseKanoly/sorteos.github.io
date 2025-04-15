@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const body = document.body;
 
   // Número ganador que puede cambiar dinámicamente (puedes cambiarlo a 5, 3, o cualquier número)
-  const winnerNumber = 90; // Aquí puedes modificar el número ganador (3 por ejemplo)
+  const winnerNumber = 220; // Aquí puedes modificar el número ganador (3 por ejemplo)
   let isRaffleInProgress = false;
 
   // Crear rayos para el número ganador
